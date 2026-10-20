@@ -40,7 +40,7 @@ ratatui-core = { workspace = true }
 termwiz.workspace = true
 
 [dev-dependencies]
-ratatui = { path = "../ratatui", features = ["termwiz"], default-features = false }
+ratatui = { path = "../ratatui", package = "ruxex-ratatui", features = ["termwiz"], default-features = false }
 
 [lints]
 workspace = true

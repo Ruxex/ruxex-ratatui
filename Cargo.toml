@@ -16,8 +16,8 @@ default-members = [
 ]
 
 [workspace.package]
-documentation = "https://docs.rs/ratatui/latest/ratatui/"
-repository = "https://github.com/ratatui/ratatui"
+documentation = "https://docs.rs/ruxex-ratatui/latest/ratatui/"
+repository = "https://github.com/Ruxex/ruxex-ratatui"
 homepage = "https://ratatui.rs"
 keywords = ["dashboard", "terminal", "tui"]
 categories = ["command-line-interface"]
@@ -51,9 +51,9 @@ portable-atomic-util = { version = "0.2.4", default-features = false }
 pretty_assertions = "1"
 rand = "0.10"
 rand_chacha = "0.10"
-ratatui = { path = "ratatui", version = "0.30.2" }
+ratatui = { path = "ratatui", version = "0.30.2", package = "ruxex-ratatui" }
 ratatui-core = { path = "ratatui-core", version = "0.1.2" }
-ratatui-crossterm = { path = "ratatui-crossterm", version = "0.1.2" }
+ratatui-crossterm = { path = "ratatui-crossterm", version = "0.1.2", package = "ruxex-ratatui-crossterm" }
 ratatui-macros = { path = "ratatui-macros", version = "0.7.2" }
 ratatui-termina = { path = "ratatui-termina", version = "0.1.0" }
 ratatui-termion = { path = "ratatui-termion", version = "0.1.2" }

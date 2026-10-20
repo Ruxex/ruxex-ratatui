@@ -46,7 +46,7 @@ termina.workspace = true
 
 [dev-dependencies]
 color-eyre.workspace = true
-ratatui = { path = "../ratatui", features = ["termina"], default-features = false }
+ratatui = { path = "../ratatui", package = "ruxex-ratatui", features = ["termina"], default-features = false }
 
 [lints]
 workspace = true

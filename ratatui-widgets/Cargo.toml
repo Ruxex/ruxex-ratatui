@@ -74,7 +74,7 @@ unicode-width.workspace = true
 color-eyre.workspace = true
 crossterm.workspace = true
 pretty_assertions.workspace = true
-ratatui = { path = "../ratatui" }
+ratatui = { path = "../ratatui", package = "ruxex-ratatui" }
 rstest.workspace = true
 
 [lints]
