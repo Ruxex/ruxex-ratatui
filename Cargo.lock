@@ -752,26 +752,6 @@ dependencies = [
  "mio",
  "parking_lot",
  "rustix 1.0.8",
- "serde",
- "signal-hook",
- "signal-hook-mio",
- "winapi",
-]
-
-[[package]]
-name = "ruxex-crossterm"
-version = "0.29.0"
-source = "git+https://github.com/Ruxex/ruxex-crossterm.git?branch=release/0.29.0#fc70fd29480fcc0c0bd960433def0ffbbdcfeeee"
-dependencies = [
- "bitflags 2.13.2",
- "crossterm_winapi",
- "derive_more",
- "document-features",
- "futures-core",
- "mio",
- "parking_lot",
- "rustix 1.0.8",
- "serde",
  "signal-hook",
  "signal-hook-mio",
  "winapi",
@@ -2763,32 +2743,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ruxex-ratatui"
-version = "0.30.2"
-dependencies = [
- "criterion",
- "crossterm 0.29.0",
- "document-features",
- "fakeit",
- "indoc",
- "instability",
- "palette",
- "pretty_assertions",
- "rand 0.10.3",
- "ratatui-core",
- "ruxex-ratatui-crossterm",
- "ratatui-macros",
- "ratatui-termina",
- "ratatui-termion",
- "ratatui-termwiz",
- "ratatui-widgets",
- "rstest",
- "serde",
- "serde_json",
- "time",
-]
-
-[[package]]
 name = "ratatui-core"
 version = "0.1.2"
 dependencies = [
@@ -2812,19 +2766,6 @@ dependencies = [
  "unicode-segmentation",
  "unicode-truncate",
  "unicode-width",
-]
-
-[[package]]
-name = "ruxex-ratatui-crossterm"
-version = "0.1.2"
-dependencies = [
- "cfg-if",
- "crossterm 0.28.1",
- "ruxex-crossterm",
- "document-features",
- "instability",
- "ratatui-core",
- "rstest",
 ]
 
 [[package]]
@@ -2852,8 +2793,8 @@ dependencies = [
  "color-eyre",
  "document-features",
  "instability",
- "ruxex-ratatui",
  "ratatui-core",
+ "ruxex-ratatui",
  "termina",
 ]
 
@@ -2872,8 +2813,8 @@ name = "ratatui-termwiz"
 version = "0.1.2"
 dependencies = [
  "document-features",
- "ruxex-ratatui",
  "ratatui-core",
+ "ruxex-ratatui",
  "termwiz",
 ]
 
@@ -2892,9 +2833,9 @@ dependencies = [
  "line-clipping",
  "portable-atomic-util",
  "pretty_assertions",
- "ruxex-ratatui",
  "ratatui-core",
  "rstest",
+ "ruxex-ratatui",
  "serde",
  "strum",
  "time",
@@ -3183,6 +3124,62 @@ name = "rustversion"
 version = "1.0.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d"
+
+[[package]]
+name = "ruxex-crossterm"
+version = "0.29.0"
+source = "git+https://github.com/Ruxex/ruxex-crossterm.git?branch=release%2F0.29.0#fc70fd29480fcc0c0bd960433def0ffbbdcfeeee"
+dependencies = [
+ "bitflags 2.13.2",
+ "crossterm_winapi",
+ "derive_more",
+ "mio",
+ "parking_lot",
+ "rustix 1.0.8",
+ "serde",
+ "signal-hook",
+ "signal-hook-mio",
+ "winapi",
+]
+
+[[package]]
+name = "ruxex-ratatui"
+version = "0.30.2"
+dependencies = [
+ "criterion",
+ "crossterm 0.29.0",
+ "document-features",
+ "fakeit",
+ "indoc",
+ "instability",
+ "palette",
+ "pretty_assertions",
+ "rand 0.10.3",
+ "ratatui-core",
+ "ratatui-macros",
+ "ratatui-termina",
+ "ratatui-termion",
+ "ratatui-termwiz",
+ "ratatui-widgets",
+ "rstest",
+ "ruxex-ratatui-crossterm",
+ "serde",
+ "serde_json",
+ "time",
+]
+
+[[package]]
+name = "ruxex-ratatui-crossterm"
+version = "0.1.2"
+dependencies = [
+ "cfg-if",
+ "crossterm 0.28.1",
+ "document-features",
+ "instability",
+ "ratatui-core",
+ "rstest",
+ "ruxex-crossterm",
+]
 
 [[package]]
 name = "ryu"
