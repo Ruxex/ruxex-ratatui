@@ -12,7 +12,7 @@ on:
         default: true
         type: boolean
       skip_published_dependencies:
-        description: Skip core and crossterm, which may already be published for this release
+        description: Skip dependency packages already published for this release
         required: true
         default: false
         type: boolean
@@ -61,49 +61,49 @@ jobs:
         run: cargo publish -p ruxex-ratatui-crossterm --locked
 
       - name: Allow the crates.io index to update
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         run: sleep 30
 
       - name: Publish ratatui-widgets
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish -p ruxex-ratatui-widgets --locked
 
       - name: Allow the crates.io index to update after ratatui-widgets
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         run: sleep 30
 
       - name: Publish ratatui-macros
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish -p ruxex-ratatui-macros --locked
 
       - name: Allow the crates.io index to update after ratatui-macros
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         run: sleep 30
 
       - name: Publish ratatui-termina
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish -p ruxex-ratatui-termina --locked
 
       - name: Publish ratatui-termion
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish -p ruxex-ratatui-termion --locked
 
       - name: Publish ratatui-termwiz
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish -p ruxex-ratatui-termwiz --locked
 
       - name: Allow the crates.io index to update after backends
-        if: github.event_name == 'push' || inputs.dry_run == false
+        if: github.event_name == 'push' || (inputs.dry_run == false && inputs.skip_published_dependencies != true)
         run: sleep 30
 
       - name: Publish ratatui
