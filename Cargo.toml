@@ -54,11 +54,11 @@ rand_chacha = "0.10"
 ratatui = { path = "ratatui", version = "0.30.2", package = "ruxex-ratatui" }
 ratatui-core = { path = "ratatui-core", version = "0.1.2", package = "ruxex-ratatui-core" }
 ratatui-crossterm = { path = "ratatui-crossterm", version = "0.1.2", package = "ruxex-ratatui-crossterm" }
-ratatui-macros = { path = "ratatui-macros", version = "0.7.2" }
-ratatui-termina = { path = "ratatui-termina", version = "0.1.0" }
-ratatui-termion = { path = "ratatui-termion", version = "0.1.2" }
-ratatui-termwiz = { path = "ratatui-termwiz", version = "0.1.2" }
-ratatui-widgets = { path = "ratatui-widgets", version = "0.3.2", default-features = false }
+ratatui-macros = { path = "ratatui-macros", package = "ruxex-ratatui-macros", version = "0.7.2" }
+ratatui-termina = { path = "ratatui-termina", package = "ruxex-ratatui-termina", version = "0.1.0" }
+ratatui-termion = { path = "ratatui-termion", package = "ruxex-ratatui-termion", version = "0.1.2" }
+ratatui-termwiz = { path = "ratatui-termwiz", package = "ruxex-ratatui-termwiz", version = "0.1.2" }
+ratatui-widgets = { path = "ratatui-widgets", package = "ruxex-ratatui-widgets", version = "0.3.2", default-features = false }
 rstest = "0.27"
 serde = { version = "1.0.228", default-features = false, features = ["derive"] }
 serde_json = "1.0.142"

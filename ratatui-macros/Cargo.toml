@@ -1,13 +1,16 @@
 [package]
-name = "ratatui-macros"
+name = "ruxex-ratatui-macros"
 version = "0.7.2"
 description = "Macros for Ratatui"
 edition.workspace = true
 license = "MIT"
-repository = "https://github.com/ratatui/ratatui"
-documentation = "https://docs.rs/ratatui-macros"
+repository.workspace = true
+documentation = "https://docs.rs/ruxex-ratatui-macros"
 keywords = ["macros", "ratatui", "tui", "ui"]
 categories = ["command-line-interface"]
+
+[lib]
+name = "ratatui_macros"
 
 [dependencies]
 ratatui-core.workspace = true

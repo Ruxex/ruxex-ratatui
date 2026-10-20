@@ -1,8 +1,8 @@
 [package]
-name = "ratatui-termwiz"
+name = "ruxex-ratatui-termwiz"
 version = "0.1.2"
 description = "Termwiz backend for the Ratatui Terminal UI library."
-documentation = "https://docs.rs/ratatui-termwiz"
+documentation = "https://docs.rs/ruxex-ratatui-termwiz"
 readme = "README.md"
 repository.workspace = true
 homepage.workspace = true
@@ -12,6 +12,9 @@ license.workspace = true
 exclude.workspace = true
 edition.workspace = true
 rust-version.workspace = true
+
+[lib]
+name = "ratatui_termwiz"
 
 [package.metadata.docs.rs]
 all-features = true

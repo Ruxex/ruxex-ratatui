@@ -2743,78 +2743,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "ratatui-macros"
-version = "0.7.2"
-dependencies = [
- "ratatui-widgets",
- "ruxex-ratatui-core",
- "trybuild",
-]
-
-[[package]]
 name = "ratatui-state-examples"
 version = "0.0.0"
 dependencies = [
  "color-eyre",
  "crossterm 0.29.0",
  "ruxex-ratatui",
-]
-
-[[package]]
-name = "ratatui-termina"
-version = "0.1.0"
-dependencies = [
- "color-eyre",
- "document-features",
- "instability",
- "ruxex-ratatui",
- "ruxex-ratatui-core",
- "termina",
-]
-
-[[package]]
-name = "ratatui-termion"
-version = "0.1.2"
-dependencies = [
- "document-features",
- "instability",
- "ruxex-ratatui-core",
- "termion",
-]
-
-[[package]]
-name = "ratatui-termwiz"
-version = "0.1.2"
-dependencies = [
- "document-features",
- "ruxex-ratatui",
- "ruxex-ratatui-core",
- "termwiz",
-]
-
-[[package]]
-name = "ratatui-widgets"
-version = "0.3.2"
-dependencies = [
- "bitflags 2.13.2",
- "color-eyre",
- "crossterm 0.29.0",
- "document-features",
- "hashbrown 0.17.1",
- "indoc",
- "instability",
- "itertools 0.15.0",
- "line-clipping",
- "portable-atomic-util",
- "pretty_assertions",
- "rstest",
- "ruxex-ratatui",
- "ruxex-ratatui-core",
- "serde",
- "strum",
- "time",
- "unicode-segmentation",
- "unicode-width",
 ]
 
 [[package]]
@@ -3129,14 +3063,14 @@ dependencies = [
  "palette",
  "pretty_assertions",
  "rand 0.10.3",
- "ratatui-macros",
- "ratatui-termina",
- "ratatui-termion",
- "ratatui-termwiz",
- "ratatui-widgets",
  "rstest",
  "ruxex-ratatui-core",
  "ruxex-ratatui-crossterm",
+ "ruxex-ratatui-macros",
+ "ruxex-ratatui-termina",
+ "ruxex-ratatui-termion",
+ "ruxex-ratatui-termwiz",
+ "ruxex-ratatui-widgets",
  "serde",
  "serde_json",
  "time",
@@ -3179,6 +3113,72 @@ dependencies = [
  "rstest",
  "ruxex-crossterm",
  "ruxex-ratatui-core",
+]
+
+[[package]]
+name = "ruxex-ratatui-macros"
+version = "0.7.2"
+dependencies = [
+ "ruxex-ratatui-core",
+ "ruxex-ratatui-widgets",
+ "trybuild",
+]
+
+[[package]]
+name = "ruxex-ratatui-termina"
+version = "0.1.0"
+dependencies = [
+ "color-eyre",
+ "document-features",
+ "instability",
+ "ruxex-ratatui",
+ "ruxex-ratatui-core",
+ "termina",
+]
+
+[[package]]
+name = "ruxex-ratatui-termion"
+version = "0.1.2"
+dependencies = [
+ "document-features",
+ "instability",
+ "ruxex-ratatui-core",
+ "termion",
+]
+
+[[package]]
+name = "ruxex-ratatui-termwiz"
+version = "0.1.2"
+dependencies = [
+ "document-features",
+ "ruxex-ratatui",
+ "ruxex-ratatui-core",
+ "termwiz",
+]
+
+[[package]]
+name = "ruxex-ratatui-widgets"
+version = "0.3.2"
+dependencies = [
+ "bitflags 2.13.2",
+ "color-eyre",
+ "crossterm 0.29.0",
+ "document-features",
+ "hashbrown 0.17.1",
+ "indoc",
+ "instability",
+ "itertools 0.15.0",
+ "line-clipping",
+ "portable-atomic-util",
+ "pretty_assertions",
+ "rstest",
+ "ruxex-ratatui",
+ "ruxex-ratatui-core",
+ "serde",
+ "strum",
+ "time",
+ "unicode-segmentation",
+ "unicode-width",
 ]
 
 [[package]]
