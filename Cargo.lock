@@ -2743,37 +2743,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "ratatui-core"
-version = "0.1.2"
-dependencies = [
- "anstyle",
- "bitflags 2.13.2",
- "compact_str",
- "critical-section",
- "document-features",
- "hashbrown 0.17.1",
- "indoc",
- "itertools 0.15.0",
- "kasuari",
- "lru",
- "palette",
- "pretty_assertions",
- "rstest",
- "serde",
- "serde_json",
- "strum",
- "thiserror 2.0.21",
- "unicode-segmentation",
- "unicode-truncate",
- "unicode-width",
-]
-
-[[package]]
 name = "ratatui-macros"
 version = "0.7.2"
 dependencies = [
- "ratatui-core",
  "ratatui-widgets",
+ "ruxex-ratatui-core",
  "trybuild",
 ]
 
@@ -2793,8 +2767,8 @@ dependencies = [
  "color-eyre",
  "document-features",
  "instability",
- "ratatui-core",
  "ruxex-ratatui",
+ "ruxex-ratatui-core",
  "termina",
 ]
 
@@ -2804,7 +2778,7 @@ version = "0.1.2"
 dependencies = [
  "document-features",
  "instability",
- "ratatui-core",
+ "ruxex-ratatui-core",
  "termion",
 ]
 
@@ -2813,8 +2787,8 @@ name = "ratatui-termwiz"
 version = "0.1.2"
 dependencies = [
  "document-features",
- "ratatui-core",
  "ruxex-ratatui",
+ "ruxex-ratatui-core",
  "termwiz",
 ]
 
@@ -2833,9 +2807,9 @@ dependencies = [
  "line-clipping",
  "portable-atomic-util",
  "pretty_assertions",
- "ratatui-core",
  "rstest",
  "ruxex-ratatui",
+ "ruxex-ratatui-core",
  "serde",
  "strum",
  "time",
@@ -3155,17 +3129,43 @@ dependencies = [
  "palette",
  "pretty_assertions",
  "rand 0.10.3",
- "ratatui-core",
  "ratatui-macros",
  "ratatui-termina",
  "ratatui-termion",
  "ratatui-termwiz",
  "ratatui-widgets",
  "rstest",
+ "ruxex-ratatui-core",
  "ruxex-ratatui-crossterm",
  "serde",
  "serde_json",
  "time",
+]
+
+[[package]]
+name = "ruxex-ratatui-core"
+version = "0.1.2"
+dependencies = [
+ "anstyle",
+ "bitflags 2.13.2",
+ "compact_str",
+ "critical-section",
+ "document-features",
+ "hashbrown 0.17.1",
+ "indoc",
+ "itertools 0.15.0",
+ "kasuari",
+ "lru",
+ "palette",
+ "pretty_assertions",
+ "rstest",
+ "serde",
+ "serde_json",
+ "strum",
+ "thiserror 2.0.21",
+ "unicode-segmentation",
+ "unicode-truncate",
+ "unicode-width",
 ]
 
 [[package]]
@@ -3176,9 +3176,9 @@ dependencies = [
  "crossterm 0.28.1",
  "document-features",
  "instability",
- "ratatui-core",
  "rstest",
  "ruxex-crossterm",
+ "ruxex-ratatui-core",
 ]
 
 [[package]]

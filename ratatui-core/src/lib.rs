@@ -5,59 +5,59 @@
     html_logo_url = "https://raw.githubusercontent.com/ratatui/ratatui/main/assets/logo.png",
     html_favicon_url = "https://raw.githubusercontent.com/ratatui/ratatui/main/assets/favicon.ico"
 )]
-//! **ratatui-core** is the core library of the [ratatui] project,
+//! **ruxex-ratatui-core** is the core library used by the [Ruxex Ratatui] project,
 //! providing the essential building blocks for creating rich terminal user interfaces in Rust.
 //!
-//! [ratatui]: https://github.com/ratatui/ratatui
+//! [Ruxex Ratatui]: https://github.com/Ruxex/ruxex-ratatui
 //!
-//! # Why `ratatui-core`?
+//! # Why `ruxex-ratatui-core`?
 //!
-//! The `ratatui-core` crate is split from the main [`ratatui`](https://crates.io/crates/ratatui)
+//! The `ruxex-ratatui-core` crate is split from the main [`ruxex-ratatui`](https://crates.io/crates/ruxex-ratatui)
 //! crate to offer better stability for widget library authors and advanced integrations. Widget
-//! libraries should generally depend on `ratatui-core`, benefiting from a stable API and reducing
+//! libraries should generally depend on `ruxex-ratatui-core`, benefiting from a stable API and reducing
 //! the need for frequent updates.
 //!
-//! Most applications, on the other hand, should depend on the main `ratatui` crate, which
+//! Most applications, on the other hand, should depend on the main `ruxex-ratatui` crate, which
 //! includes built-in widgets, backend re-exports, and higher-level setup helpers.
 //!
 //! In practice:
 //!
-//! - Use [`ratatui`] to build applications.
-//! - Use `ratatui-core` to implement widgets, backend integrations, or other code that needs the
+//! - Use [`ruxex-ratatui`] to build applications.
+//! - Use `ruxex-ratatui-core` to implement widgets, backend integrations, or other code that needs the
 //!   core rendering and layout contracts directly.
 //!
 //! # Installation
 //!
-//! Add `ratatui-core` to your `Cargo.toml`:
+//! Add `ruxex-ratatui-core` to your `Cargo.toml`:
 //!
 //! ```shell
-//! cargo add ratatui-core
+//! cargo add ruxex-ratatui-core
 //! ```
 //!
 //! # Crate Organization
 //!
-//! `ratatui-core` is part of the Ratatui workspace that was modularized in version 0.30.0 to
+//! `ruxex-ratatui-core` is part of the Ruxex Ratatui workspace that was modularized in version 0.30.0 to
 //! improve compilation times, API stability, and dependency management. This crate provides the
 //! foundational types and traits that other crates in the workspace depend on.
 //!
-//! **When to use `ratatui-core`:**
+//! **When to use `ruxex-ratatui-core`:**
 //!
 //! - Building widget libraries that implement [`Widget`] or [`StatefulWidget`]
 //! - Building custom integrations on top of Ratatui's core rendering contracts
 //! - You want minimal dependencies and faster compilation times
 //! - You need maximum API stability (core types change less frequently)
 //!
-//! **When to use the main [`ratatui`] crate:**
+//! **When to use the main [`ruxex-ratatui`] crate:**
 //!
 //! - Building applications
 //! - You want built-in widgets, backend re-exports, and setup helpers such as `ratatui::run`
 //!
 //! For detailed information about the workspace organization, see [ARCHITECTURE.md].
 //!
-//! [`ratatui`]: https://crates.io/crates/ratatui
+//! [`ruxex-ratatui`]: https://crates.io/crates/ruxex-ratatui
 //! [`Widget`]: widgets::Widget
 //! [`StatefulWidget`]: widgets::StatefulWidget
-//! [ARCHITECTURE.md]: https://github.com/ratatui/ratatui/blob/main/ARCHITECTURE.md
+//! [ARCHITECTURE.md]: https://github.com/Ruxex/ruxex-ratatui/blob/main/ARCHITECTURE.md
 #![cfg_attr(feature = "document-features", doc = "\n## Features")]
 #![cfg_attr(feature = "document-features", doc = document_features::document_features!())]
 //!
